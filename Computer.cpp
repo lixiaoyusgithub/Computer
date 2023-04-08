@@ -85,7 +85,5 @@ int main()
 	cout << "程序运行" << endl;
 	cout << "消息循环，直到关闭窗口" << endl;
 	Main_Device();
-	cout<<"right";
-	cout << "11111";
 	return 0;
 }
