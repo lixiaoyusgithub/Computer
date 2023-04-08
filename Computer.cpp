@@ -86,6 +86,6 @@ int main()
 	cout << "消息循环，直到关闭窗口" << endl;
 	Main_Device();
 	cout<<"right";
-	cout << "please";
+	cout << "11111";
 	return 0;
 }
