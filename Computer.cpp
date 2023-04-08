@@ -11,22 +11,22 @@ void Second_Device(int Data_bus, int Address_bus, char Command)
 	{
 		if (Address_bus > N)
 		{
-			cout << "³¬³ö´æ´¢¿Õ¼ä£¡" << endl;
+			cout << "è¶…å‡ºå­˜å‚¨ç©ºé—´ï¼" << endl;
 			return;
 		}
 		p[Address_bus] = Data_bus;
-		cout << "ÎÄ¼þ´æÈë¿Õ¼ä" << endl;
+		cout << "æ–‡ä»¶å­˜å…¥ç©ºé—´" << endl;
 	}
 	else if (Command == 'O')
 	{
 		if (p[Address_bus] == 0)
 		{
-			cout << "´Ë¿Õ¼äÎ´´æ´¢ÎÄ¼þ" << endl;
+			cout << "æ­¤ç©ºé—´æœªå­˜å‚¨æ–‡ä»¶" << endl;
 			return;
 		}
 		else
 		{
-			cout << "¸Ã¿Õ¼ä´æ´¢µÄÊý¾ÝÎª: ";
+			cout << "è¯¥ç©ºé—´å­˜å‚¨çš„æ•°æ®ä¸º: ";
 			cout << p[Address_bus] << endl;
 		}
 	}
@@ -40,7 +40,7 @@ void Clock(int Data_bus, int Address_bus, char Command)
 	if (Command == 'F')
 	{
 		Second_Device(Data_bus, Address_bus, Command);
-		cout << "ÓÅÏÈ²Ù×÷" << endl;
+		cout << "ä¼˜å…ˆæ“ä½œ" << endl;
 		return;
 	}
 }
@@ -49,7 +49,7 @@ void Busy()
 	flag++;
 	if (flag > 10)
 	{
-		cout << "×ÜÏßÃ¦" << endl;
+		cout << "æ€»çº¿å¿™" << endl;
 		flag = 0;
 		return;
 	}
@@ -60,7 +60,7 @@ void Main_Device()
 	int Address_bus = 0;
 	char Command = '0';
 	int l=0,r = 0;
-	cout << "Êý¾ÝºÍµØÖ·£¬ÒÔ¼°ÃüÁî£¨I£¬O£©" << endl;
+	cout << "æ•°æ®å’Œåœ°å€ï¼Œä»¥åŠå‘½ä»¤ï¼ˆIï¼ŒOï¼‰" << endl;
 	while (Command != 'E')
 	{
 		cin >> Data_bus >> Address_bus >> Command;
@@ -82,8 +82,9 @@ void Main_Device()
 }
 int main()
 {
-	cout << "³ÌÐòÔËÐÐ" << endl;
-	cout << "ÏûÏ¢Ñ­»·£¬Ö±µ½¹Ø±Õ´°¿Ú" << endl;
+	cout << "ç¨‹åºè¿è¡Œ" << endl;
+	cout << "æ¶ˆæ¯å¾ªçŽ¯ï¼Œç›´åˆ°å…³é—­çª—å£" << endl;
 	Main_Device();
+	cout<<"right";
 	return 0;
 }
